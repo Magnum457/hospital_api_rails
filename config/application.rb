@@ -17,6 +17,7 @@ require "action_cable/engine"
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
+Date::DATE_FORMATS[:default] = '%d/%m/%Y'
 
 module Hospital
   class Application < Rails::Application
@@ -30,8 +31,10 @@ module Hospital
     
     config.autoload_paths << Rails.root.join("spec/support")
 
-    # config.time_zone = "Central Time (US & Canada)"
-    # config.eager_load_paths << Rails.root.join("extras")
+    config.i18n.default_locale = "pt-BR"
+    config.time_zone = "America/Fortaleza"
+    config.active_record.default_timezone = :local
+    config.active_record.time_zone_aware_attributes = false
 
     # Only loads a smaller set of middleware suitable for API only apps.
     # Middleware like session, flash, cookies can be added back manually.

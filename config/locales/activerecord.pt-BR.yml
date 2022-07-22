@@ -1,0 +1,184 @@
+pt-BR:
+  activerecord:
+    errors:
+      user:
+        not_found: 'Usuário não encontrado.'
+      action_participant:
+        there_are_viagens: 'Existem viagens para o período informado.'
+        there_are_blitz: 'Existem blitz/comissões para o período informado.'
+        there_are_afastamentos: 'Existem afastamentos de %{erro} para o período informado.'
+      action_class_participant:
+        there_are_viagens: 'Existem viagens para o período informado.'
+        there_are_blitz: 'Existem blitz/comissões para o período informado.'
+        there_are_afastamentos: 'Existem afastamentos de %{erro} para o período informado.'
+      action_type:
+        action_exists: 'Não é permitido atualizar, pois está relacionado a alguma ação!'
+      theme:
+        action_exists: 'Não é permitido atualizar, pois está relacionado a alguma ação!'
+      role:
+        valid_value: "Valor permitido menor que R$100,00"
+      messages:
+        restrict_dependent_update: "Não é possível atualizar este registro, pois existe %{record} relecionado(a)."
+        record_invalid: "A validação falhou: %{errors}"
+        restrict_dependent_destroy:
+          one: "Não é possível excluir este registro, pois existe %{record} em ação relecionado(a)."
+          has_many: "Não é possível excluir este registro, pois existem %{record} relacionados(as)."
+    models:
+      shift: "Turno"
+      action_type: "Tipos de ações"
+      participant: "Participantes"
+      school_team: "Turmas"
+      age_group: "Faixa etária"
+      target_public: "Públicos-alvos"
+      network: "Rede"
+      role: "Função"
+      city: "Municípios"
+      regional: "Regionais"
+      institution: "Instituições"
+      unity: "Unidades"
+      contact_institution: "Contatos"
+      address_institution: "Endereços"
+      action_school: "Ações"
+      action_participant: "Participantes"
+      action_theme: "Tema de ação"
+      action_situation: "Situação da ação"
+      action_target_public: "Público-alvo da ação"
+      action_institution: "Instituição da ação"
+      address_action: "Endereço da ação"
+      approach: "Abordagens"
+      theme: "Tema"
+      user: "Usuário"
+      alert: "Alerta"
+      payment_status: "Status de pagamento"
+      payment_process: "Processo de pagamento"
+      payment_process_status: "Status do processo de pagamento"
+      action_class: "Aulas"
+      action_class_participant: "Participantes da aula"
+    attributes:
+      action_class:
+        situation: "Situação"
+        date: "Data"
+        initial_hour: "Hora inícial"
+        final_hour: "Hora final"
+        action_school_id: "Ação"
+        action_class_participants: "Participantes da aula"
+      action_class_participant:
+        participant_id: "Participante da aula"
+        role_id: "Função"
+        action_class_id: "Aula"
+      payment_status:
+        description: "Descrição"
+      payment_process:
+        monthyear: "Mês/Ano"
+        payment_status_id: "Status do processo"
+      alert:
+        title: "Descrição"
+        sistem_id: "Sistema"
+        result: "Valor"
+        type_id: "Tipo"
+      shift:
+        description: "Descrição"
+        action_schools: "Ações"
+      action_type:
+        description: "Descrição"
+        action_schools: "Ações"
+        remuneration: "Remunerada"
+      participant:
+        name: "Nome"
+        cpf: "CPF"
+        position: "Cargo"
+        action_participants: "Ações"
+        registry: "Matrícula"
+        company_id: "Empresa"
+        education_level_id: "Grau de instrução"
+      school_team:
+        name: "Nome"
+        approach_school_team: "Abordagens"
+      age_group:
+        description: "Descrição"
+        approaches: "Abordagens"
+      target_public:
+        description: "Descrição"
+        action_schools: "Ações"
+      network:
+        description: "Descrição"
+        institutions: "Instituições"
+      role:
+        description: "Descrição"
+        action_participants: "Participantes de ações"
+        remuneration: "Remunerada"
+        value: "Valor"
+        time_block: "Bloqueio de horário"
+        education_level: "Grau de instrução"
+      city:
+        description: "Descrição"
+        regional: "Regional"
+      regional:
+        description: "Descrição"
+      institution:
+        name: "Nome"
+        cnpj: "CNPJ"
+        city_id: "Município"
+        network: "Rede"
+        email_institucional: "Email institucional"
+        action_institutions: "Ações"
+      unity:
+        description: "Descrição"
+        city: "Município"
+      contact_institution:
+        name: "Nome"
+        email: "Email"
+        commercial_phone: "Telefone comercial"
+        cell_phone: "Telefone celular"
+        position: "Cargo"
+        institution: "Instituição"
+      address_institution:
+        number_km: "Número/KM"
+        complement: "Complemento"
+        address: "Logradouro/Rodovia"
+        institution: "Instituição"
+      action_school:
+        city_id: "Município"
+        shift_id: "Turno"
+        action_type_id: "Tipo de ação"
+        unity_id: "Unidade Responsável"
+        approaches: "Abordagens"
+        date_initial_action: "Data inicial"
+        date_final_action: "Data final"
+        hour_quantity: "Quantidade hora real"
+        remuneration: "Remunerada"
+        situation_id: "Situação"
+        observation: "Observação"
+        action_target_public: "Público-alvo da ação"
+        action_institution: "Instituição da ação"
+      action_participant:
+        action_school: "Ação"
+        participant: "Participante"
+        role: "Função"
+      action_theme:
+        action_school: "Ação"
+        theme: "Tema"
+      address_action:
+        number_km: "Número/KM"
+        complement: "Complemento"
+        action_school: "Ação"
+        address: "Logradouro/Rodovia e Bairro"
+        district: "Bairro"
+      theme:
+        description: "Descrição"
+      action_target_public:
+        action_school: "Ação"
+        target_public: "Público-alvo"
+      action_institution:
+        action_school: "Ação"
+        institution: "Instituição"
+      approach:
+        observation: "Observação"
+        quantity: "Quantidade"
+        target_public: "Público-alvo"
+        action_school: "Ação"
+        age_group: "Faixa etária"
+      user:
+        email: 'E-mail'
+        type_user_id: 'Função'
+        nome: 'Nome'
