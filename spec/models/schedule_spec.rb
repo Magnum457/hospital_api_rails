@@ -1,6 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Schedule, type: :model do
+  subject { build(:schedule) }
+
   describe "associations" do
     it { should belong_to(:medic) }
   end
@@ -10,4 +12,11 @@ RSpec.describe Schedule, type: :model do
     it { should validate_presence_of(:day) }
     it { should validate_presence_of(:time) }
   end
+
+  context "Be Valid" do
+    it "with all required attributes" do
+      expect(build(:schedule)).to be_valid
+    end
+  end
+
 end

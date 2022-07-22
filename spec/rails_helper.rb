@@ -75,6 +75,7 @@ RSpec.configure do |config|
       example.run
     end
   end
+  config.include RequestSpecHelper, type: :request
 
   # Filter lines from Rails gems in backtraces.
   config.filter_rails_from_backtrace!
