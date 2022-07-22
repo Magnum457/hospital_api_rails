@@ -1,8 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe Specialty, type: :model do
-  subject { build(:specialty) }
-
   context "associations" do
     it { should have_many(:medics) }
   end

@@ -30,6 +30,7 @@ module Hospital
     # in config/environments, which are processed later.
     
     config.autoload_paths << Rails.root.join("spec/support")
+    config.autoload_paths << Rails.root.join("app/controllers/representers")
 
     config.i18n.default_locale = "pt-BR"
     config.time_zone = "America/Fortaleza"

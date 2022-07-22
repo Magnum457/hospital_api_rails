@@ -1,8 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe Medic, type: :model do
-  subject { build(:medic) }
-
   context "associations" do
     it { should have_many(:schedules) }
     it { should belong_to(:specialty) }

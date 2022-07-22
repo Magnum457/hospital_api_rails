@@ -1,8 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe Schedule, type: :model do
-  subject { build(:schedule) }
-
   describe "associations" do
     it { should belong_to(:medic) }
   end
