@@ -5,7 +5,7 @@ RSpec.describe Schedule, type: :model do
     it { should belong_to(:medic) }
   end
 
-  describe "validates" do
+  describe "validations" do
     it { should validate_presence_of(:medic) }
     it { should validate_presence_of(:day) }
     it { should validate_presence_of(:time) }
