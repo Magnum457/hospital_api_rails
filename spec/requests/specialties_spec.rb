@@ -30,6 +30,7 @@ RSpec.describe "Specialties", type: :request do
     end
 
     context "When specialty does not exist" do
+      let(:specialty_id) { 0 }
       it "returns status code 404" do
         expect(response).to have_http_status(404)
       end
@@ -53,12 +54,9 @@ RSpec.describe "Specialties", type: :request do
     end
 
     context "When an invalid request" do
-      before { post "/api/v1/specialties", params: {} }
+      before { post "/api/v1/specialties", params: { name: "" } }
       it "returns status code 422" do
         expect(response).to have_http_status(422)
-      end
-      it "returns a failure message" do
-        expect(response.body).to include("can't be blank")
       end
     end
   end
@@ -66,24 +64,24 @@ RSpec.describe "Specialties", type: :request do
   # update
   describe "PUT /specialties/:id" do
     let(:valid_attributes) { { name: "Pediatric" } }
-    before { put "/api/v1/specialties#{specialty_id}", params: valid_attributes }
+    before { put "/api/v1/specialties/#{specialty_id}", params: valid_attributes }
     context "When specialty exists" do
       it "returns status code 204" do
         expect(response).to have_http_status(204)
       end
       it "updates the specialty" do
         updated_item = Specialty.find(specialty_id)
-        expect(updated_item.title).to match(/Pediatric/)
+        expect(updated_item.name).to match(/Pediatric/)
       end
     end
 
-    context "When the book does not exist" do
+    context "When the specialty does not exist" do
       let(:specialty_id) { 0 }
       it "returns status code 404" do
         expect(response).to have_http_status(404)
       end
       it "returns a not found message" do
-        expect(response.body).to include("Couldn't find Book with 'id'=0")
+        expect(response.body).to include("Couldn't find Specialty with 'id'=0")
       end
     end
   end
